@@ -1,7 +1,5 @@
 🧠 IIT Madras TDS Assignment Helper
 
-![License: MIT](https://img.shields.io/badge/License-MIT-greenmg.shields.io/badge/Pythomg.shields.io/badge/FastAPIul)
-
 FastAPI application that automatically answers questions from IIT Madras' Online Degree in Data Science, Tools in Data Science course assignments, saving you time and effort.
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/74038190/212257468-1e9a91c1-b626-4baa-b15d-5c385dfa7ed2.gif" width="500"> </p>
@@ -37,7 +35,7 @@ This API seamlessly processes questions from the Tools in Data Science course as
 🛠️ Installation
 Clone this repository and install dependencies:
 
-bash
+
 `git clone https://github.com/jadepilot64/tds_project2.git
 cd tds_project2
 pip install -r requirements.txt`
@@ -45,12 +43,12 @@ pip install -r requirements.txt`
 ⚙️ Environment Setup
 Create a .env file with the required environment variables:
 
-text
+
 `AIPROXY_TOKEN=your_token_here`
 
 📝 Usage
 Run Locally
-bash
+
 
 `uvicorn app.main:app --reload`
 
@@ -64,11 +62,12 @@ question: The assignment question text (required)
 file: Any file attachment (optional)
 
 Example Request
-bash
-curl -X POST "http://localhost:8000/api/" \
+
+`curl -X POST "http://localhost:8000/api/" \
   -H "Content-Type: multipart/form-data" \
   -F "question=Download and unzip file abcd.zip which has a single extract.csv file inside. What is the value in the 'answer' column of the CSV file?" \
-  -F "file=@path/to/abcd.zip"
+  -F "file=@path/to/abcd.zip"`
+  
 Response Format
 json
 {
