@@ -1,43 +1,46 @@
-IIT Madras Assignment Helper API
-A FastAPI application that automatically answers questions from IIT Madras' Online Degree in Data Science course assignments.
+🧠 IIT Madras TDS Assignment Helper
+![License: MIT](https://img.shields.io/badge/License-MIT-greenmg.shields.io/badge/Pythomg.shields.io/badge/FastAPIul FastAPI application that automatically answers questions from IIT Madras' Online Degree in Data Science, Tools in Data Science course assignments, saving you time and effort.
 
-Overview
-This API processes questions from the Tools in Data Science course assignments, analyzes them, and returns correct answers. It can handle various question types including:
+<p align="center"> <img src="https://user-images.githubusercontent.com/74038190/212257468-1e9a91c1-b626-4baa-b15d-5c385dfa7ed2.gif" width="500"> </p>
+🚀 Features
+✅ Intelligent Question Analysis: Automatically identifies question patterns and selects appropriate processing methods
 
-Extracting data from CSV files
+📊 Data Extraction: Extracts valuable information from CSV files and ZIP archives
 
-Processing ZIP archives
+📈 Statistical Processing: Performs calculations on datasets with precision
 
-Calculating statistics
+🔍 File Analysis: Processes encoded files and extracts relevant data
 
-Analyzing encoded files
+⚙️ Command Simulation: Handles command execution and formula processing
 
-Executing commands and formulas
+🔒 Secure Integration: Connects with AI services for enhanced processing capabilities
 
-Features
-RESTful API for answering assignment questions
+📋 Overview
+This API seamlessly processes questions from the Tools in Data Science course assignments and returns accurate answers. It can handle various question types including:
 
-File upload and processing capabilities
+📁 Extracting data from CSV files
 
-Intelligent question analysis and pattern matching
+🗜️ Processing ZIP archives
 
-Support for all five graded assignments from the course
+📊 Calculating statistics
 
-Secure handling of queries via OpenAI integration
+🔤 Analyzing encoded files
 
-Installation
+💻 Executing commands and formulas
+
+🛠️ Installation
 Clone this repository and install dependencies:
 
 bash
 git clone https://github.com/jadepilot64/tds_project2.git
 cd tds_project2
 pip install -r requirements.txt
-Environment Setup
+⚙️ Environment Setup
 Create a .env file with the required environment variables:
 
 text
 AIPROXY_TOKEN=your_token_here
-Usage
+📝 Usage
 Run Locally
 bash
 uvicorn app.main:app --reload
@@ -50,21 +53,29 @@ question: The assignment question text (required)
 
 file: Any file attachment (optional)
 
-Example using curl:
-
+Example Request
 bash
 curl -X POST "http://localhost:8000/api/" \
   -H "Content-Type: multipart/form-data" \
   -F "question=Download and unzip file abcd.zip which has a single extract.csv file inside. What is the value in the 'answer' column of the CSV file?" \
   -F "file=@path/to/abcd.zip"
-Response format:
-
+Response Format
 json
 {
   "answer": "1234567890"
 }
-Deployment
-This application can be deployed to platforms like Vercel, Heroku, or any other service that supports Python applications.
+🚀 Deployment
+This application can be deployed to platforms like:
 
-License
+Vercel
+
+Heroku
+
+Railway
+
+Any other service that supports Python applications
+
+📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+<p align="center"> <sub>Made with ❤️</sub> </p>
