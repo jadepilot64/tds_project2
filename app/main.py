@@ -200,9 +200,9 @@ async def get_answer(
 # Root endpoint to check if API is running
 @app.get("/")
 async def root():
-    return {"message": "IIT Madras Data Science Assignment Helper API is running. Use /api/ endpoint for questions."}
+    return {"message": "IIT Madras Data Science TDS Assignment Helper API is running. Use /api/ endpoint for questions."}
 
 # For local development
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("app.main:app", host="0.0.0.0", port=10000, reload=True)
