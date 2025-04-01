@@ -1,5 +1,6 @@
 # app/main.py
 import os
+from dotenv import load_dotenv
 import shutil
 import tempfile
 from typing import Optional
@@ -20,6 +21,12 @@ from app.utils.functions import (
     count_days_of_week,
     calculate_spreadsheet_formula
 )
+
+load_dotenv()
+
+AIPROXY_TOKEN = os.getenv("AIPROXY_TOKEN")
+if not AIPROXY_TOKEN:
+    raise ValueError("Missing AIPROXY_TOKEN environment variable")
 
 # Initialize FastAPI app
 app = FastAPI(title="Assignment Answer API")
